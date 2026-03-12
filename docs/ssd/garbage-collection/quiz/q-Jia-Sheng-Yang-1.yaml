@@ -5,13 +5,13 @@ question: |
   與容量幾乎未使用的SSD相比，已使用90%的在寫入過程有突然的latency spike，
   以下哪個選項最能解釋這個latency spike。
 options:
-  - text: "GC必須將許多包含大量valid page的block中讀取資料並寫到新的block，為了要得到free space"
+  - text: "GC必須從包含大量valid page的block中讀取資料並寫到新的block，以釋放free space“
     correct: true
     explanation: |
-      當 SSD 使用率高達 90% 時，GC 通常只能選到 valid page 比例極高的 block 作為 victim，這會導致需要搬移大量的 valid data，造成極高的 write amplification 與 latency spike。
-  - text: "FTL必須對file system做defragmetation，以確保寫入的檔案資料放在連續的位置"
+      當SSD使用率高達90%時，GC通常只能選到valid page比例較高的block 作為victim，這會導致需要搬移大量的valid data，造成較高的write amplification與latency spike。
+  - text: "FTL必須對file system做defragmentation，以確保寫入的檔案資料放在連續的位置"
     explanation: |
-      SSD不像傳統HDD那樣透過需要物理上透過旋轉在platter找到對的位置，FTL可以logical address轉到physical address，
+      SSD不像傳統HDD那樣透過需要物理上透過旋轉在platter找到對的位置，FTL可以將logical address轉到physical address，
       不需要像HDD做defragmentation。
   - text: "SSD 控制器被迫等待來自作業系統的同步 TRIM 指令，以確認哪些特定的block可以安全地覆寫"
     explanation: |
