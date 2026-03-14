@@ -16,5 +16,5 @@ options:
     explanation: |
       CPU 完全沒碰到資料，無法進行加密處理。
   - text: "不可以。因為 Zero-copy 僅支援大於 4KB 的傳輸，而 AES 加密通常是以 128-bit 為單位進行，兩者單位不相容。"
-    explanation: |
+    explanation: | 
       干擾選項，Zero-copy 的限制不在於資料大小單位，而在於資料流向。
