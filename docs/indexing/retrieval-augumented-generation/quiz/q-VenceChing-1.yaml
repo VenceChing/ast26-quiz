@@ -8,7 +8,7 @@ options:
   - text: "接受提案。GPU 算力充足的前提下搭配 Dynamic Batching 技術，能克服 Vision Model 推論較慢的問題，以動態運算換取靜態記憶體，突破硬體的儲存瓶頸。"
     correct: false
     explanation: |
-      盲目套用優化策略，只看到「時間」卻忽略了「空間」。影像轉向量是極致的降維壓縮（4MB 變 3KB）。為了套用此架構而強制系統改存龐大的原圖，不僅沒省下空間，反而會讓記憶體負載暴增千倍，徹底違背了該提案「節省記憶體」的初衷。
+      為了省下 3KB 的向量空間，反而迫使系統必須常駐 4MB 的原始圖片，這會導致記憶體負載暴增千倍，徹底違背提案初衷。
   - text: "駁回。LEANN 的 Two-Level Search 機制僅能彌補 IVF-PQ 的群內排名誤差，無法修復 HNSW-PQ 因為導航誤差所導致的 Recall 損失。"
     correct: false
     explanation: |
