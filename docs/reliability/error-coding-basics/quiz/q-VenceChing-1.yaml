@@ -1,4 +1,4 @@
-author: 荊維凡
+author: VenceChing
 date: 2026-05-18
 question: |
   某分散式儲存系統將三副本 (replication) 改為 RS(14, 10) 以降低成本，且底層硬碟皆具備 CRC 檢驗機制。關於此系統的 error coding 原理，下列敘述何者正確？
